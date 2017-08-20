@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		79B6659CDC94D4BEC740C9F2 /* libPods-openweather-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CA3AD38101138F0766CDF6 /* libPods-openweather-iosTests.a */; };
 		D1BFAC81E71CA2A21F828134 /* libPods-openweather-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DD3D1CF2F45C08ECCB86CE /* libPods-openweather-ios.a */; };
+		E27E8BEC1F48D9AE00ED5399 /* OWMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BEB1F48D9AE00ED5399 /* OWMAPIClient.m */; };
+		E27E8BF01F48DF0F00ED5399 /* OWMWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BEF1F48DF0F00ED5399 /* OWMWeather.m */; };
+		E27E8BF41F48E02C00ED5399 /* OWMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BF31F48E02C00ED5399 /* OWMConstants.m */; };
+		E27E8BF91F48E25D00ED5399 /* OWMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BF81F48E25D00ED5399 /* OWMSearchViewController.m */; };
+		E27E8BFE1F48E27900ED5399 /* OWMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BFD1F48E27900ED5399 /* OWMBaseViewController.m */; };
+		E27E8C021F48E39700ED5399 /* OWMSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C011F48E39700ED5399 /* OWMSearchResultCell.m */; };
+		E27E8C071F48E6A400ED5399 /* OWMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C061F48E6A400ED5399 /* OWMLocation.m */; };
+		E27E8C0C1F48F14700ED5399 /* OWMPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */; };
 		E2FD0F8E1F48D71000764787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0F8D1F48D71000764787 /* AppDelegate.m */; };
 		E2FD0F941F48D71000764787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F921F48D71000764787 /* Main.storyboard */; };
 		E2FD0F961F48D71000764787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F951F48D71000764787 /* Assets.xcassets */; };
@@ -32,6 +40,24 @@
 		6315877F8E6EF55E86723248 /* Pods-openweather-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-iosTests/Pods-openweather-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACFAD29D158FE6DC22F4C0CE /* Pods-openweather-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-ios/Pods-openweather-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE7E9F690130EB7A846A20B /* Pods-openweather-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-ios/Pods-openweather-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E27E8BE91F48D8E900ED5399 /* OWMNetworkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMNetworkProtocol.h; sourceTree = "<group>"; };
+		E27E8BEA1F48D9AE00ED5399 /* OWMAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMAPIClient.h; sourceTree = "<group>"; };
+		E27E8BEB1F48D9AE00ED5399 /* OWMAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMAPIClient.m; sourceTree = "<group>"; };
+		E27E8BEE1F48DF0F00ED5399 /* OWMWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeather.h; sourceTree = "<group>"; };
+		E27E8BEF1F48DF0F00ED5399 /* OWMWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeather.m; sourceTree = "<group>"; };
+		E27E8BF21F48E02C00ED5399 /* OWMConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMConstants.h; sourceTree = "<group>"; };
+		E27E8BF31F48E02C00ED5399 /* OWMConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMConstants.m; sourceTree = "<group>"; };
+		E27E8BF71F48E25D00ED5399 /* OWMSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMSearchViewController.h; sourceTree = "<group>"; };
+		E27E8BF81F48E25D00ED5399 /* OWMSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMSearchViewController.m; sourceTree = "<group>"; };
+		E27E8BFC1F48E27900ED5399 /* OWMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMBaseViewController.h; sourceTree = "<group>"; };
+		E27E8BFD1F48E27900ED5399 /* OWMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMBaseViewController.m; sourceTree = "<group>"; };
+		E27E8C001F48E39700ED5399 /* OWMSearchResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMSearchResultCell.h; sourceTree = "<group>"; };
+		E27E8C011F48E39700ED5399 /* OWMSearchResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMSearchResultCell.m; sourceTree = "<group>"; };
+		E27E8C051F48E6A400ED5399 /* OWMLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMLocation.h; sourceTree = "<group>"; };
+		E27E8C061F48E6A400ED5399 /* OWMLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMLocation.m; sourceTree = "<group>"; };
+		E27E8C0A1F48F14700ED5399 /* OWMPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMPermissionViewController.h; sourceTree = "<group>"; };
+		E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMPermissionViewController.m; sourceTree = "<group>"; };
+		E27E8C0E1F48F21A00ED5399 /* OWMPermissionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMPermissionProtocol.h; sourceTree = "<group>"; };
 		E2FD0F891F48D71000764787 /* openweather-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openweather-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FD0F8C1F48D71000764787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2FD0F8D1F48D71000764787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +113,121 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E27E8BE61F48D88000ED5399 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BE81F48D8C400ED5399 /* Client */,
+				E27E8BE71F48D88400ED5399 /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E27E8BE71F48D88400ED5399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E27E8BE81F48D8C400ED5399 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BE91F48D8E900ED5399 /* OWMNetworkProtocol.h */,
+				E27E8BEA1F48D9AE00ED5399 /* OWMAPIClient.h */,
+				E27E8BEB1F48D9AE00ED5399 /* OWMAPIClient.m */,
+				E27E8BEE1F48DF0F00ED5399 /* OWMWeather.h */,
+				E27E8BEF1F48DF0F00ED5399 /* OWMWeather.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		E27E8BF51F48E23F00ED5399 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BFF1F48E37B00ED5399 /* Views */,
+				E27E8BF61F48E24700ED5399 /* Controllers */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E27E8BF61F48E24700ED5399 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BF71F48E25D00ED5399 /* OWMSearchViewController.h */,
+				E27E8BF81F48E25D00ED5399 /* OWMSearchViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E27E8BFA1F48E26200ED5399 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BFB1F48E26900ED5399 /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E27E8BFB1F48E26900ED5399 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8BFC1F48E27900ED5399 /* OWMBaseViewController.h */,
+				E27E8BFD1F48E27900ED5399 /* OWMBaseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E27E8BFF1F48E37B00ED5399 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C001F48E39700ED5399 /* OWMSearchResultCell.h */,
+				E27E8C011F48E39700ED5399 /* OWMSearchResultCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E27E8C031F48E68400ED5399 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C041F48E69000ED5399 /* Models */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		E27E8C041F48E69000ED5399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C051F48E6A400ED5399 /* OWMLocation.h */,
+				E27E8C061F48E6A400ED5399 /* OWMLocation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E27E8C081F48F12400ED5399 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C0D1F48F20700ED5399 /* Models */,
+				E27E8C091F48F12D00ED5399 /* Controllers */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		E27E8C091F48F12D00ED5399 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C0A1F48F14700ED5399 /* OWMPermissionViewController.h */,
+				E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E27E8C0D1F48F20700ED5399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E27E8C0E1F48F21A00ED5399 /* OWMPermissionProtocol.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E2FD0F801F48D71000764787 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +251,11 @@
 		E2FD0F8B1F48D71000764787 /* openweather-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E27E8BE61F48D88000ED5399 /* API */,
+				E27E8BFA1F48E26200ED5399 /* Common */,
+				E27E8C031F48E68400ED5399 /* Location */,
+				E27E8C081F48F12400ED5399 /* Permission */,
+				E27E8BF51F48E23F00ED5399 /* Search */,
 				E2FD0FB11F48D72500764787 /* Resources */,
 				E2FD0FB01F48D71800764787 /* Supporting Files */,
 			);
@@ -131,6 +277,8 @@
 				E2FD0F8C1F48D71000764787 /* AppDelegate.h */,
 				E2FD0F8D1F48D71000764787 /* AppDelegate.m */,
 				E2FD0F9B1F48D71000764787 /* main.m */,
+				E27E8BF21F48E02C00ED5399 /* OWMConstants.h */,
+				E27E8BF31F48E02C00ED5399 /* OWMConstants.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -345,8 +493,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27E8C021F48E39700ED5399 /* OWMSearchResultCell.m in Sources */,
+				E27E8C0C1F48F14700ED5399 /* OWMPermissionViewController.m in Sources */,
+				E27E8BEC1F48D9AE00ED5399 /* OWMAPIClient.m in Sources */,
+				E27E8BF41F48E02C00ED5399 /* OWMConstants.m in Sources */,
 				E2FD0F9C1F48D71000764787 /* main.m in Sources */,
+				E27E8BF01F48DF0F00ED5399 /* OWMWeather.m in Sources */,
+				E27E8C071F48E6A400ED5399 /* OWMLocation.m in Sources */,
+				E27E8BF91F48E25D00ED5399 /* OWMSearchViewController.m in Sources */,
 				E2FD0F8E1F48D71000764787 /* AppDelegate.m in Sources */,
+				E27E8BFE1F48E27900ED5399 /* OWMBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +721,7 @@
 				E2FD0FAC1F48D71000764787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2FD0FAD1F48D71000764787 /* Build configuration list for PBXNativeTarget "openweather-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +730,7 @@
 				E2FD0FAF1F48D71000764787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

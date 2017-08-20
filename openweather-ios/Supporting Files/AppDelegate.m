@@ -16,6 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    application.statusBarHidden = YES;
+
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
     // Override point for customization after application launch.
     return YES;
 }
