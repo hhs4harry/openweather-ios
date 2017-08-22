@@ -96,7 +96,7 @@ NSString * const kLocationStatus = @"com.owm.location.status";
 
 -(void)updateInternalStatusWithStatus:(CLAuthorizationStatus)status{
     //Shouldnt reach here. Update status now that we are here.
-    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusDenied) {
+    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
         self.internalStatus = @(StatusDenied);
     } else if (status == kCLAuthorizationStatusNotDetermined) {
         self.internalStatus = @(StatusUnknown);
