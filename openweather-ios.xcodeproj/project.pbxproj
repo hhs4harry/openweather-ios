@@ -840,7 +840,9 @@
 			baseConfigurationReference = ACFAD29D158FE6DC22F4C0CE /* Pods-openweather-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/openweather-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrysingh.openweather.openweather-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,7 +855,9 @@
 			baseConfigurationReference = CEE7E9F690130EB7A846A20B /* Pods-openweather-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/openweather-ios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrysingh.openweather.openweather-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
