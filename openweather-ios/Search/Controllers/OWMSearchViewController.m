@@ -7,9 +7,10 @@
 //
 
 #import "OWMSearchViewController.h"
-#import "OWMPermissionViewController.h"
 #import "OWMSearchResultCell.h"
 #import "OWMLocation.h"
+#import "OWMWeather.h"
+#import "OWMWeatherManager.h"
 @import MapKit;
 
 @interface OWMSearchViewController () <UISearchBarDelegate, OWMLocationProtocol>
@@ -31,12 +32,20 @@
     
     self.title = @"Search";
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if([OWMLocation manager].status == StatusUnknown) {
-            [self presentViewController:[[OWMPermissionViewController alloc] initWithPermission:((id<OWMPermissionProtocol>)[OWMLocation manager])] animated:YES completion:nil];
-        }
-    });
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close"] style:UIBarButtonItemStylePlain target:self action:@selector(backBarButtonTouchUpInside:)];
+    [backItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = backItem;
+    self.navigationItem.hidesBackButton = YES;
+}
+
+-(void)backBarButtonTouchUpInside:(id)sender{
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.4;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 #pragma mark - SearchBar Delegate
@@ -74,6 +83,20 @@
     [location addAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] } range:[result.title rangeOfString:self.searchBar.text]];
     cell.locationLabel.attributedText = location;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MKLocalSearchCompletion *location = [self.results objectAtIndex:indexPath.item];
+    
+    __weak typeof(self) wself = self;
+    [[OWMLocation manager] revergeGeocodeAddress:location.title withCompletion:^(CLPlacemark *placemark) {
+        if (placemark) {
+            OWMWeather *weather = [[OWMWeather alloc] initWithPlacemark:placemark];
+            [[OWMWeatherManager manager] addWeather:weather];
+            
+            [wself backBarButtonTouchUpInside:self];
+        }
+    }];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{

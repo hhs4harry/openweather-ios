@@ -15,6 +15,8 @@
 
 @implementation OWMAPIClient
 
+@synthesize networkStatusBlock;
+
 + (instancetype _Nullable)client {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:@"- client is not a valid initializer. Use initWithBaseURL:"
@@ -52,10 +54,15 @@
     [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         __strong typeof(self) sself = wself;
         
-        if(sself.networkStatusBlock){
-            sself.networkStatusBlock(status);
+        if (status == AFNetworkReachabilityStatusReachableViaWiFi || status == AFNetworkReachabilityStatusReachableViaWWAN) {
+            sself.networkStatus = NetworkStatusRechable;
+        } else {
+            sself.networkStatus = NetworkStatusNotReachable;
         }
-        sself.networkStatus = status;
+        
+        if(sself.networkStatusBlock){
+            sself.networkStatusBlock(sself.networkStatus);
+        }
     }];
 }
 

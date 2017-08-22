@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		79B6659CDC94D4BEC740C9F2 /* libPods-openweather-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CA3AD38101138F0766CDF6 /* libPods-openweather-iosTests.a */; };
 		D1BFAC81E71CA2A21F828134 /* libPods-openweather-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DD3D1CF2F45C08ECCB86CE /* libPods-openweather-ios.a */; };
+		E21D92371F4A4AC30017381E /* OWMWeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92361F4A4AC30017381E /* OWMWeatherManager.m */; };
+		E21D923A1F4A576C0017381E /* OWMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92391F4A576C0017381E /* OWMCity.m */; };
+		E21D923D1F4A58AA0017381E /* OWMForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D923C1F4A58AA0017381E /* OWMForecast.m */; };
+		E21D92401F4A58C90017381E /* OWMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D923F1F4A58C90017381E /* OWMBaseModel.m */; };
+		E21D92431F4A594E0017381E /* OWMWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92421F4A594E0017381E /* OWMWeatherLocation.m */; };
+		E21D92461F4A689E0017381E /* OWMWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92451F4A689E0017381E /* OWMWeatherData.m */; };
+		E21D92491F4A69360017381E /* OWMMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92481F4A69360017381E /* OWMMain.m */; };
+		E21D924C1F4A6B4A0017381E /* OWMWeatherForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D924B1F4A6B4A0017381E /* OWMWeatherForecast.m */; };
+		E21D924F1F4A6C3F0017381E /* OWMClouds.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D924E1F4A6C3F0017381E /* OWMClouds.m */; };
+		E21D92521F4A6C990017381E /* OWMWinds.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92511F4A6C990017381E /* OWMWinds.m */; };
+		E21D92551F4A6D0D0017381E /* OWMRain.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92541F4A6D0D0017381E /* OWMRain.m */; };
+		E21D92581F4A6D380017381E /* OWMSnow.m in Sources */ = {isa = PBXBuildFile; fileRef = E21D92571F4A6D380017381E /* OWMSnow.m */; };
+		E26E1E951F4B56BC0065332B /* OWMWeatherSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1E941F4B56BC0065332B /* OWMWeatherSummaryCell.m */; };
+		E26E1E981F4B6CD30065332B /* OWMToday.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1E971F4B6CD30065332B /* OWMToday.m */; };
+		E26E1E9D1F4B748F0065332B /* OWMFullWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1E9C1F4B748F0065332B /* OWMFullWeatherViewController.m */; };
+		E26E1EA11F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1EA01F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m */; };
+		E26E1EA41F4B7F950065332B /* OWMDailyWeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1EA31F4B7F950065332B /* OWMDailyWeatherCell.m */; };
+		E26E1EA71F4B95880065332B /* OWMDayForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E1EA61F4B95880065332B /* OWMDayForecast.m */; };
 		E27E8BEC1F48D9AE00ED5399 /* OWMAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BEB1F48D9AE00ED5399 /* OWMAPIClient.m */; };
 		E27E8BF01F48DF0F00ED5399 /* OWMWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BEF1F48DF0F00ED5399 /* OWMWeather.m */; };
 		E27E8BF41F48E02C00ED5399 /* OWMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8BF31F48E02C00ED5399 /* OWMConstants.m */; };
@@ -17,6 +35,7 @@
 		E27E8C021F48E39700ED5399 /* OWMSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C011F48E39700ED5399 /* OWMSearchResultCell.m */; };
 		E27E8C071F48E6A400ED5399 /* OWMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C061F48E6A400ED5399 /* OWMLocation.m */; };
 		E27E8C0C1F48F14700ED5399 /* OWMPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */; };
+		E2AE1E631F49580B005F2551 /* OWMWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1E621F49580B005F2551 /* OWMWeatherViewController.m */; };
 		E2FD0F8E1F48D71000764787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0F8D1F48D71000764787 /* AppDelegate.m */; };
 		E2FD0F941F48D71000764787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F921F48D71000764787 /* Main.storyboard */; };
 		E2FD0F961F48D71000764787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F951F48D71000764787 /* Assets.xcassets */; };
@@ -40,6 +59,42 @@
 		6315877F8E6EF55E86723248 /* Pods-openweather-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-iosTests/Pods-openweather-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACFAD29D158FE6DC22F4C0CE /* Pods-openweather-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-ios/Pods-openweather-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE7E9F690130EB7A846A20B /* Pods-openweather-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-openweather-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-openweather-ios/Pods-openweather-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E21D92351F4A4AC30017381E /* OWMWeatherManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherManager.h; sourceTree = "<group>"; };
+		E21D92361F4A4AC30017381E /* OWMWeatherManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherManager.m; sourceTree = "<group>"; };
+		E21D92381F4A576C0017381E /* OWMCity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMCity.h; sourceTree = "<group>"; };
+		E21D92391F4A576C0017381E /* OWMCity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMCity.m; sourceTree = "<group>"; };
+		E21D923B1F4A58AA0017381E /* OWMForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMForecast.h; sourceTree = "<group>"; };
+		E21D923C1F4A58AA0017381E /* OWMForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMForecast.m; sourceTree = "<group>"; };
+		E21D923E1F4A58C90017381E /* OWMBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMBaseModel.h; sourceTree = "<group>"; };
+		E21D923F1F4A58C90017381E /* OWMBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMBaseModel.m; sourceTree = "<group>"; };
+		E21D92411F4A594E0017381E /* OWMWeatherLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherLocation.h; sourceTree = "<group>"; };
+		E21D92421F4A594E0017381E /* OWMWeatherLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherLocation.m; sourceTree = "<group>"; };
+		E21D92441F4A689E0017381E /* OWMWeatherData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherData.h; sourceTree = "<group>"; };
+		E21D92451F4A689E0017381E /* OWMWeatherData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherData.m; sourceTree = "<group>"; };
+		E21D92471F4A69360017381E /* OWMMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMMain.h; sourceTree = "<group>"; };
+		E21D92481F4A69360017381E /* OWMMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMMain.m; sourceTree = "<group>"; };
+		E21D924A1F4A6B4A0017381E /* OWMWeatherForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherForecast.h; sourceTree = "<group>"; };
+		E21D924B1F4A6B4A0017381E /* OWMWeatherForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherForecast.m; sourceTree = "<group>"; };
+		E21D924D1F4A6C3F0017381E /* OWMClouds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMClouds.h; sourceTree = "<group>"; };
+		E21D924E1F4A6C3F0017381E /* OWMClouds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMClouds.m; sourceTree = "<group>"; };
+		E21D92501F4A6C990017381E /* OWMWinds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWinds.h; sourceTree = "<group>"; };
+		E21D92511F4A6C990017381E /* OWMWinds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWinds.m; sourceTree = "<group>"; };
+		E21D92531F4A6D0D0017381E /* OWMRain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMRain.h; sourceTree = "<group>"; };
+		E21D92541F4A6D0D0017381E /* OWMRain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMRain.m; sourceTree = "<group>"; };
+		E21D92561F4A6D380017381E /* OWMSnow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMSnow.h; sourceTree = "<group>"; };
+		E21D92571F4A6D380017381E /* OWMSnow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMSnow.m; sourceTree = "<group>"; };
+		E26E1E931F4B56BC0065332B /* OWMWeatherSummaryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherSummaryCell.h; sourceTree = "<group>"; };
+		E26E1E941F4B56BC0065332B /* OWMWeatherSummaryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherSummaryCell.m; sourceTree = "<group>"; };
+		E26E1E961F4B6CD30065332B /* OWMToday.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMToday.h; sourceTree = "<group>"; };
+		E26E1E971F4B6CD30065332B /* OWMToday.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMToday.m; sourceTree = "<group>"; };
+		E26E1E9B1F4B748F0065332B /* OWMFullWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMFullWeatherViewController.h; sourceTree = "<group>"; };
+		E26E1E9C1F4B748F0065332B /* OWMFullWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMFullWeatherViewController.m; sourceTree = "<group>"; };
+		E26E1E9F1F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMThreeHourTodayWeatherCellTableViewCell.h; sourceTree = "<group>"; };
+		E26E1EA01F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMThreeHourTodayWeatherCellTableViewCell.m; sourceTree = "<group>"; };
+		E26E1EA21F4B7F950065332B /* OWMDailyWeatherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMDailyWeatherCell.h; sourceTree = "<group>"; };
+		E26E1EA31F4B7F950065332B /* OWMDailyWeatherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMDailyWeatherCell.m; sourceTree = "<group>"; };
+		E26E1EA51F4B95880065332B /* OWMDayForecast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMDayForecast.h; sourceTree = "<group>"; };
+		E26E1EA61F4B95880065332B /* OWMDayForecast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMDayForecast.m; sourceTree = "<group>"; };
 		E27E8BE91F48D8E900ED5399 /* OWMNetworkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMNetworkProtocol.h; sourceTree = "<group>"; };
 		E27E8BEA1F48D9AE00ED5399 /* OWMAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMAPIClient.h; sourceTree = "<group>"; };
 		E27E8BEB1F48D9AE00ED5399 /* OWMAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMAPIClient.m; sourceTree = "<group>"; };
@@ -58,6 +113,8 @@
 		E27E8C0A1F48F14700ED5399 /* OWMPermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMPermissionViewController.h; sourceTree = "<group>"; };
 		E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMPermissionViewController.m; sourceTree = "<group>"; };
 		E27E8C0E1F48F21A00ED5399 /* OWMPermissionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMPermissionProtocol.h; sourceTree = "<group>"; };
+		E2AE1E611F49580B005F2551 /* OWMWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherViewController.h; sourceTree = "<group>"; };
+		E2AE1E621F49580B005F2551 /* OWMWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherViewController.m; sourceTree = "<group>"; };
 		E2FD0F891F48D71000764787 /* openweather-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openweather-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FD0F8C1F48D71000764787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2FD0F8D1F48D71000764787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +170,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E21D92341F4A4AAD0017381E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E21D92351F4A4AC30017381E /* OWMWeatherManager.h */,
+				E21D92361F4A4AC30017381E /* OWMWeatherManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E26E1E921F4B56A10065332B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E26E1E931F4B56BC0065332B /* OWMWeatherSummaryCell.h */,
+				E26E1E941F4B56BC0065332B /* OWMWeatherSummaryCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E26E1E991F4B740D0065332B /* Weather Extended */ = {
+			isa = PBXGroup;
+			children = (
+				E26E1E9E1F4B7E780065332B /* Views */,
+				E26E1E9A1F4B74700065332B /* Controllers */,
+			);
+			path = "Weather Extended";
+			sourceTree = "<group>";
+		};
+		E26E1E9A1F4B74700065332B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E26E1E9B1F4B748F0065332B /* OWMFullWeatherViewController.h */,
+				E26E1E9C1F4B748F0065332B /* OWMFullWeatherViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E26E1E9E1F4B7E780065332B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E26E1E9F1F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.h */,
+				E26E1EA01F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m */,
+				E26E1EA21F4B7F950065332B /* OWMDailyWeatherCell.h */,
+				E26E1EA31F4B7F950065332B /* OWMDailyWeatherCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E27E8BE61F48D88000ED5399 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +229,32 @@
 		E27E8BE71F48D88400ED5399 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E21D923E1F4A58C90017381E /* OWMBaseModel.h */,
+				E21D923F1F4A58C90017381E /* OWMBaseModel.m */,
+				E21D923B1F4A58AA0017381E /* OWMForecast.h */,
+				E21D923C1F4A58AA0017381E /* OWMForecast.m */,
+				E21D92381F4A576C0017381E /* OWMCity.h */,
+				E21D92391F4A576C0017381E /* OWMCity.m */,
+				E21D92411F4A594E0017381E /* OWMWeatherLocation.h */,
+				E21D92421F4A594E0017381E /* OWMWeatherLocation.m */,
+				E21D92441F4A689E0017381E /* OWMWeatherData.h */,
+				E21D92451F4A689E0017381E /* OWMWeatherData.m */,
+				E21D92471F4A69360017381E /* OWMMain.h */,
+				E21D92481F4A69360017381E /* OWMMain.m */,
+				E21D924A1F4A6B4A0017381E /* OWMWeatherForecast.h */,
+				E21D924B1F4A6B4A0017381E /* OWMWeatherForecast.m */,
+				E21D924D1F4A6C3F0017381E /* OWMClouds.h */,
+				E21D924E1F4A6C3F0017381E /* OWMClouds.m */,
+				E21D92501F4A6C990017381E /* OWMWinds.h */,
+				E21D92511F4A6C990017381E /* OWMWinds.m */,
+				E21D92531F4A6D0D0017381E /* OWMRain.h */,
+				E21D92541F4A6D0D0017381E /* OWMRain.m */,
+				E21D92561F4A6D380017381E /* OWMSnow.h */,
+				E21D92571F4A6D380017381E /* OWMSnow.m */,
+				E26E1E961F4B6CD30065332B /* OWMToday.h */,
+				E26E1E971F4B6CD30065332B /* OWMToday.m */,
+				E26E1EA51F4B95880065332B /* OWMDayForecast.h */,
+				E26E1EA61F4B95880065332B /* OWMDayForecast.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +292,7 @@
 		E27E8BFA1F48E26200ED5399 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E21D92341F4A4AAD0017381E /* Models */,
 				E27E8BFB1F48E26900ED5399 /* Controllers */,
 			);
 			path = Common;
@@ -228,6 +359,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E2AE1E5F1F4957E8005F2551 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E26E1E921F4B56A10065332B /* Views */,
+				E2AE1E601F4957F8005F2551 /* Controllers */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		E2AE1E601F4957F8005F2551 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2AE1E611F49580B005F2551 /* OWMWeatherViewController.h */,
+				E2AE1E621F49580B005F2551 /* OWMWeatherViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E2FD0F801F48D71000764787 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +404,8 @@
 				E27E8BFA1F48E26200ED5399 /* Common */,
 				E27E8C031F48E68400ED5399 /* Location */,
 				E27E8C081F48F12400ED5399 /* Permission */,
+				E2AE1E5F1F4957E8005F2551 /* Weather */,
+				E26E1E991F4B740D0065332B /* Weather Extended */,
 				E27E8BF51F48E23F00ED5399 /* Search */,
 				E2FD0FB11F48D72500764787 /* Resources */,
 				E2FD0FB01F48D71800764787 /* Supporting Files */,
@@ -493,16 +644,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26E1EA71F4B95880065332B /* OWMDayForecast.m in Sources */,
+				E26E1E981F4B6CD30065332B /* OWMToday.m in Sources */,
+				E21D92371F4A4AC30017381E /* OWMWeatherManager.m in Sources */,
 				E27E8C021F48E39700ED5399 /* OWMSearchResultCell.m in Sources */,
 				E27E8C0C1F48F14700ED5399 /* OWMPermissionViewController.m in Sources */,
+				E21D923A1F4A576C0017381E /* OWMCity.m in Sources */,
+				E21D92431F4A594E0017381E /* OWMWeatherLocation.m in Sources */,
 				E27E8BEC1F48D9AE00ED5399 /* OWMAPIClient.m in Sources */,
+				E21D92581F4A6D380017381E /* OWMSnow.m in Sources */,
+				E2AE1E631F49580B005F2551 /* OWMWeatherViewController.m in Sources */,
+				E21D924C1F4A6B4A0017381E /* OWMWeatherForecast.m in Sources */,
 				E27E8BF41F48E02C00ED5399 /* OWMConstants.m in Sources */,
+				E21D92401F4A58C90017381E /* OWMBaseModel.m in Sources */,
+				E21D92461F4A689E0017381E /* OWMWeatherData.m in Sources */,
 				E2FD0F9C1F48D71000764787 /* main.m in Sources */,
+				E21D92521F4A6C990017381E /* OWMWinds.m in Sources */,
 				E27E8BF01F48DF0F00ED5399 /* OWMWeather.m in Sources */,
+				E21D92491F4A69360017381E /* OWMMain.m in Sources */,
 				E27E8C071F48E6A400ED5399 /* OWMLocation.m in Sources */,
+				E21D924F1F4A6C3F0017381E /* OWMClouds.m in Sources */,
 				E27E8BF91F48E25D00ED5399 /* OWMSearchViewController.m in Sources */,
+				E26E1E951F4B56BC0065332B /* OWMWeatherSummaryCell.m in Sources */,
 				E2FD0F8E1F48D71000764787 /* AppDelegate.m in Sources */,
+				E26E1EA41F4B7F950065332B /* OWMDailyWeatherCell.m in Sources */,
+				E26E1E9D1F4B748F0065332B /* OWMFullWeatherViewController.m in Sources */,
+				E21D923D1F4A58AA0017381E /* OWMForecast.m in Sources */,
 				E27E8BFE1F48E27900ED5399 /* OWMBaseViewController.m in Sources */,
+				E21D92551F4A6D0D0017381E /* OWMRain.m in Sources */,
+				E26E1EA11F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
