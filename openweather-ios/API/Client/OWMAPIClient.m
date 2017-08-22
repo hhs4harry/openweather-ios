@@ -47,7 +47,7 @@
 }
 
 -(void)setupRechability{
-    self.reachabilityManager = [AFNetworkReachabilityManager managerForDomain:self.baseURL.absoluteString];
+    self.reachabilityManager = [AFNetworkReachabilityManager managerForDomain:@"www.google.com"];
     [self.reachabilityManager startMonitoring];
     
     __weak typeof(self) wself = self;

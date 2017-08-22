@@ -10,6 +10,7 @@
 #import "OWMForecast.h"
 #import "OWMMain.h"
 #import "OWMConstants.h"
+#import "NSDate+Helper.h"
 
 @interface OWMDayForecast()
 @property (strong, nonatomic) NSNumber *min;
@@ -86,6 +87,6 @@
 }
 
 -(NSString *)day{
-    return [OWMConstants dayNameFromDate:self.date];
+    return self.date.dayName;
 }
 @end

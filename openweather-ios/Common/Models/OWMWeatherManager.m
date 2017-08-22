@@ -9,8 +9,11 @@
 #import "OWMWeatherManager.h"
 #import "OWMWeather.h"
 
+NSString * const kOWMWeatherManagerEncodeDecodeWeather = @"com.owm.manager.weather.encode.decode";
+
 @interface OWMWeatherManager()
 @property (strong, nonatomic) NSMutableArray<OWMWeather *> *weathers;
+@property (strong, nonatomic) OWMWeather *locationBasedWeather;
 @end
 
 @implementation OWMWeatherManager
@@ -27,16 +30,53 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        // Decode objects
-        self.weathers = [[NSMutableArray alloc] init];
+        [self unarchiveServers];
+
+        if (!self.weathers) {
+            self.weathers = [[NSMutableArray alloc] init];
+        }
     }
     
     return self;
 }
 
+#pragma mark - Encode / Decode
+
+-(void)unarchiveServers{
+    NSData *weatherData = [[NSUserDefaults standardUserDefaults] objectForKey:kOWMWeatherManagerEncodeDecodeWeather];
+    self.weathers = [NSKeyedUnarchiver unarchiveObjectWithData:weatherData];
+}
+
+-(void)archiveWeather{
+    NSData *weatherData = [NSKeyedArchiver archivedDataWithRootObject:self.weathers];
+    [[NSUserDefaults standardUserDefaults] setObject:weatherData forKey:kOWMWeatherManagerEncodeDecodeWeather];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 -(void)addWeather:(OWMWeather *)weather{
     if (weather && ![self.weathers containsObject:weather]) {
-        [self.weathers addObject:weather];
+        if (weather.type == WeatherTypeLocation) {
+            [self.weathers insertObject:weather atIndex:0];
+            [self fireDidAddWeather:weather atIndex:0];
+        } else {
+            [self.weathers addObject:weather];
+            NSInteger index = [self.weathers indexOfObject:weather];
+            
+            [self fireDidAddWeather:weather atIndex:index];
+        }
+        
+        [self archiveWeather];
+    }
+}
+
+-(void)removeWeather:(OWMWeather *)weather{
+    if (weather && [self.weathers containsObject:weather]) {
+        NSInteger index = [self.weathers indexOfObject:weather];
+        [self.weathers removeObject:weather];
+        
+        [self fireDidRemoveWeather:weather atIndex:index];
+        
+        [self archiveWeather];
     }
 }
 
@@ -52,4 +92,36 @@
     return [self.weathers objectAtIndex:index];
 }
 
+-(OWMWeather * _Nullable)locationBasedWeather{
+    if (_locationBasedWeather) {
+        return _locationBasedWeather;
+    }
+    
+    if (!self.weathers || !self.weathers.count) {
+        return nil;
+    }
+    
+    for (OWMWeather *weather in self.weathers) {
+        if (weather.type == WeatherTypeLocation) {
+            _locationBasedWeather = weather;
+            break;
+        }
+    }
+    
+    return _locationBasedWeather;
+}
+
+#pragma mark - FireDelegate
+
+-(void)fireDidAddWeather:(OWMWeather *)weather atIndex:(NSUInteger)index{
+    if (self.delegate && [((NSObject *) self.delegate) respondsToSelector:@selector(didAddWeather:atIndex:)]) {
+        [self.delegate didAddWeather:weather atIndex:index];
+    }
+}
+
+-(void)fireDidRemoveWeather:(OWMWeather *)weather atIndex:(NSUInteger)index{
+    if (self.delegate && [((NSObject *) self.delegate) respondsToSelector:@selector(didRemoveWeather:atIndex:)]) {
+        [self.delegate didRemoveWeather:weather atIndex:index];
+    }
+}
 @end

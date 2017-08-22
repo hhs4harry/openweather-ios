@@ -12,8 +12,12 @@
 #import "OWMCity.h"
 #import "OWMForecast.h"
 #import "OWMMain.h"
+#import "OWMToday.h"
+#import "OWMWeatherForecast.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface OWMWeatherSummaryCell() <OWMWeatherProtocol>
+@property (weak, nonatomic) IBOutlet UIImageView *weatherImageView;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
 @property (strong, nonatomic) OWMWeather *weather;
@@ -34,6 +38,11 @@
         self.weather.delegate = self;
         self.cityLabel.text = self.weather.city;
         self.weatherLabel.text = self.weather.currentTemp;
+        
+        OWMWeatherForecast *wfc = self.weather.today.weather.firstObject;
+        if (wfc && wfc.icon) {
+            [self.weatherImageView sd_setImageWithURL:[NSURL URLWithString:wfc.icon]];
+        }
     }
 }
 

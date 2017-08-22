@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    NetworkStatusNotReachable = -1,
+    NetworkStatusNotReachable = 0,
     NetworkStatusRechable
 } NetworkStatus;
 

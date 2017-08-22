@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface OWMDayForecast : NSObject
-@property (readonly, nonatomic) NSNumber *min;
-@property (readonly, nonatomic) NSNumber *max;
-@property (readonly, nonatomic) NSString *day;
-@property (readonly, nonatomic) NSArray *forecast;
-@property (readonly, nonatomic) NSDate *date;
+@property (readonly, nonatomic, nonnull) NSNumber *min;
+@property (readonly, nonatomic, nonnull) NSNumber *max;
+@property (readonly, nonatomic, nonnull) NSString *day;
+@property (readonly, nonatomic, nonnull) NSArray *forecast;
+@property (readonly, nonatomic, nonnull) NSDate *date;
 
--(instancetype _Nullable)initWithDate:(NSDate *)date andDaysForecast:(NSArray *)forecast;
+-(instancetype _Nullable)initWithDate:(NSDate * _Nonnull)date andDaysForecast:(NSArray * _Nonnull)forecast;
 @end

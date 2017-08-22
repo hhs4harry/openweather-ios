@@ -12,6 +12,12 @@
 @class OWMWeatherData;
 @class OWMToday;
 @class OWMDayForecast;
+@class OWMLocation;
+
+typedef enum : NSUInteger {
+    WeatherTypeCustom,
+    WeatherTypeLocation
+} WeatherType;
 
 @protocol OWMWeatherProtocol
 
@@ -25,13 +31,17 @@
 @property (readonly, nonatomic, nullable) OWMWeatherData *weather;
 @property (readonly, nonatomic, nullable) OWMToday *today;
 
-@property (readonly, nonatomic) CLPlacemark * _Nonnull placemark;
 @property (weak, nonatomic, nullable) id<OWMWeatherProtocol> delegate;
+@property (readonly, nonatomic, nonnull) CLPlacemark * placemark;
+@property (readonly, nonatomic) WeatherType type;
 
 -(instancetype _Nullable)initWithPlacemark:(CLPlacemark * _Nonnull)placemark;
+-(instancetype _Nullable)initWithLocationManager:(OWMLocation * _Nonnull)location;
 
+-(NSArray<OWMDayForecast *> * _Nullable)forcastForRange:(NSRange)range;
 -(NSArray<OWMDayForecast *> * _Nullable)fiveDayForecast;
 -(NSArray * _Nullable)forecastForDate:(NSDate * _Nonnull)date;
+-(NSString * _Nonnull)summary;
 -(NSString * _Nonnull)city;
 -(NSString * _Nonnull)currentTemp;
 -(NSString * _Nonnull)todayMinTemp;

@@ -7,6 +7,7 @@ target 'openweather-ios' do
 
   pod 'JSONModel', '~> 1.7'
   pod 'AFNetworking', '~> 3.1'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'openweather-iosTests' do
     inherit! :search_paths

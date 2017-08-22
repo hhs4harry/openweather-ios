@@ -20,6 +20,8 @@ NSString * const kLocationStatus = @"com.owm.location.status";
 @property (strong, nonatomic) CLGeocoder *geocoder;
 @property (strong, nonatomic) MKLocalSearchCompleter *searchCompleter;
 @property (strong, nonatomic, nullable) PermissionCompletionHandler permissionHandler;
+@property (strong, nonatomic) NSDate *lastTimestamp;
+@property (strong, nonatomic) CLLocation *lastLocation;
 @end
 
 @implementation OWMLocation
@@ -40,6 +42,10 @@ NSString * const kLocationStatus = @"com.owm.location.status";
     if(self = [super init]) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        self.locationManager.pausesLocationUpdatesAutomatically = NO;
+        [self startUpdatingLocation];
+        
         self.searchCompleter = [[MKLocalSearchCompleter alloc] init];
         self.searchCompleter.filterType = MKSearchCompletionFilterTypeLocationsOnly;
         self.searchCompleter.delegate = self;
@@ -47,6 +53,30 @@ NSString * const kLocationStatus = @"com.owm.location.status";
     }
 
     return self;
+}
+
+- (void)startUpdatingLocation{
+    if (self.status == StatusGranted) {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *mostRecentLocation = locations.lastObject;
+    
+    NSDate *now = [NSDate date];
+    NSTimeInterval interval = self.lastTimestamp ? [now timeIntervalSinceDate:self.lastTimestamp] : 0;
+    
+    if (!self.lastLocation || (!self.lastTimestamp || interval >= 5 * 60)){
+        self.lastTimestamp = now;
+        
+        if (self.delegate && [((NSObject *)self.delegate) respondsToSelector:@selector(didUpdateLocation:)]) {
+            [self.delegate didUpdateLocation:mostRecentLocation];
+        }
+    }
+    
+    self.lastLocation = mostRecentLocation;
 }
 
 #pragma mark - Permission
@@ -74,6 +104,7 @@ NSString * const kLocationStatus = @"com.owm.location.status";
         self.internalStatus = @(StatusGranted);
     }
     
+    [self startUpdatingLocation];
     [self checkAndFirePermissionHandler];
 }
 
@@ -104,8 +135,8 @@ NSString * const kLocationStatus = @"com.owm.location.status";
 -(NSNumber *)internalStatus{
     if (!_internalStatus && [[NSUserDefaults standardUserDefaults] objectForKey:kLocationStatus]) {
         _internalStatus = [[NSUserDefaults standardUserDefaults] objectForKey:kLocationStatus];
-    } else {
-        self.internalStatus = @(StatusUnknown);
+    } else if (!_internalStatus) {
+        _internalStatus = @(StatusUnknown);
     }
     
     return _internalStatus;

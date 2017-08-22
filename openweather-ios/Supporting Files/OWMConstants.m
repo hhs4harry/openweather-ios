@@ -10,7 +10,7 @@
 #import "OWMConstants.h"
 
 FOUNDATION_EXPORT NSLocaleKey const NSLocaleTemperatureUnit;
-NSString * const kDefaultTempLocation = @"com.openweather.constants.tempunit";
+NSString * const kDefaultTempLocation = @"com.owm.constants.tempunit";
 
 @implementation OWMConstants
 

@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weatherSummaryCell" rowHeight="59" id="V7E-aw-x3r" customClass="OWMWeatherSummaryCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherSummaryCell" rowHeight="59" id="V7E-aw-x3r" customClass="OWMWeatherSummaryCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V7E-aw-x3r" id="p26-E4-tfF">
@@ -146,15 +146,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-Wb-AS9">
+                                                    <rect key="frame" x="168.5" y="10" width="38.5" height="38.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Wsd-Wb-AS9" secondAttribute="height" multiplier="1:1" id="UzU-bV-6ld"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="PcW-MA-EnT" secondAttribute="bottom" id="6Ql-hC-omO"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="XSo-fz-UyV" secondAttribute="bottom" id="LEH-pg-zkh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wsd-Wb-AS9" secondAttribute="bottom" constant="10" id="LKT-Ep-4WP"/>
+                                                <constraint firstItem="Wsd-Wb-AS9" firstAttribute="centerX" secondItem="p26-E4-tfF" secondAttribute="centerX" id="NNK-ad-lmN"/>
                                                 <constraint firstItem="PcW-MA-EnT" firstAttribute="top" secondItem="p26-E4-tfF" secondAttribute="topMargin" id="OxM-Rw-D4P"/>
                                                 <constraint firstAttribute="trailing" secondItem="lI5-A0-FGF" secondAttribute="trailing" id="Q37-Eb-aLg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="XSo-fz-UyV" secondAttribute="trailing" id="Rgh-eI-gB7"/>
                                                 <constraint firstItem="lI5-A0-FGF" firstAttribute="top" secondItem="p26-E4-tfF" secondAttribute="top" id="XxF-he-WgL"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PcW-MA-EnT" secondAttribute="trailingMargin" id="Y4L-cx-BhN"/>
+                                                <constraint firstItem="Wsd-Wb-AS9" firstAttribute="top" secondItem="p26-E4-tfF" secondAttribute="top" constant="10" id="YeK-uT-ec4"/>
                                                 <constraint firstItem="XSo-fz-UyV" firstAttribute="top" secondItem="p26-E4-tfF" secondAttribute="topMargin" id="gms-7r-Waf"/>
                                                 <constraint firstAttribute="bottom" secondItem="lI5-A0-FGF" secondAttribute="bottom" id="hEM-RC-SJ8"/>
                                                 <constraint firstItem="lI5-A0-FGF" firstAttribute="leading" secondItem="p26-E4-tfF" secondAttribute="leading" id="hyL-js-Plz"/>
@@ -163,6 +172,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cityLabel" destination="PcW-MA-EnT" id="ePv-Mk-Y6z"/>
+                                            <outlet property="weatherImageView" destination="Wsd-Wb-AS9" id="5fS-5z-gnq"/>
                                             <outlet property="weatherLabel" destination="XSo-fz-UyV" id="hpI-hP-ehh"/>
                                         </connections>
                                     </tableViewCell>
@@ -281,15 +291,15 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3i3-xw-gmb">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JG8-Ng-nXd">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JG8-Ng-nXd">
                                                         <size key="itemSize" width="93" height="93"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="YES" id="S4n-SH-0hf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="YES" reuseIdentifier="threeHourCell" id="S4n-SH-0hf" customClass="OWMThreeHourCell">
+                                                            <rect key="frame" x="5" y="3.5" width="93" height="93"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
@@ -304,7 +314,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZKk-q6-DP1">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZKk-q6-DP1">
                                                                         <rect key="frame" x="8" y="28" width="77" height="37"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWg-st-rR2">
@@ -330,6 +340,11 @@
                                                                 <constraint firstAttribute="trailingMargin" secondItem="ZKk-q6-DP1" secondAttribute="trailing" id="p5F-hR-ue3"/>
                                                                 <constraint firstItem="hWg-st-rR2" firstAttribute="trailing" secondItem="S4n-SH-0hf" secondAttribute="trailingMargin" id="v1x-3n-CVF"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="forecastImageView" destination="ZKk-q6-DP1" id="AN5-g2-ylY"/>
+                                                                <outlet property="tempLabel" destination="hWg-st-rR2" id="5B8-6X-9UL"/>
+                                                                <outlet property="timeLabel" destination="4LW-uC-Xth" id="JFI-Oe-0BI"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -349,7 +364,7 @@
                                             <outlet property="collectionView" destination="3i3-xw-gmb" id="v5d-Ba-Jes"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dailyWeatherCell" id="w5h-6c-rfO" customClass="OWMDailyWeatherCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dailyWeatherCell" id="w5h-6c-rfO" customClass="OWMDailyWeatherCell">
                                         <rect key="frame" x="0.0" y="128" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w5h-6c-rfO" id="wW6-zM-NbP">
@@ -362,7 +377,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="My8-F9-BJh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="My8-F9-BJh">
                                                     <rect key="frame" x="165.5" y="0.0" width="43.5" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="My8-F9-BJh" secondAttribute="height" multiplier="1:1" id="GCk-he-Ufi"/>

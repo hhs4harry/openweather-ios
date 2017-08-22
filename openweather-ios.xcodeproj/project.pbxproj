@@ -36,6 +36,8 @@
 		E27E8C071F48E6A400ED5399 /* OWMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C061F48E6A400ED5399 /* OWMLocation.m */; };
 		E27E8C0C1F48F14700ED5399 /* OWMPermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27E8C0B1F48F14700ED5399 /* OWMPermissionViewController.m */; };
 		E2AE1E631F49580B005F2551 /* OWMWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1E621F49580B005F2551 /* OWMWeatherViewController.m */; };
+		E2F519021F4CA5BD0006155C /* OWMThreeHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F519011F4CA5BD0006155C /* OWMThreeHourCell.m */; };
+		E2F519061F4CAD230006155C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F519051F4CAD230006155C /* NSDate+Helper.m */; };
 		E2FD0F8E1F48D71000764787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0F8D1F48D71000764787 /* AppDelegate.m */; };
 		E2FD0F941F48D71000764787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F921F48D71000764787 /* Main.storyboard */; };
 		E2FD0F961F48D71000764787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0F951F48D71000764787 /* Assets.xcassets */; };
@@ -115,6 +117,10 @@
 		E27E8C0E1F48F21A00ED5399 /* OWMPermissionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMPermissionProtocol.h; sourceTree = "<group>"; };
 		E2AE1E611F49580B005F2551 /* OWMWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMWeatherViewController.h; sourceTree = "<group>"; };
 		E2AE1E621F49580B005F2551 /* OWMWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMWeatherViewController.m; sourceTree = "<group>"; };
+		E2F519001F4CA5BD0006155C /* OWMThreeHourCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMThreeHourCell.h; sourceTree = "<group>"; };
+		E2F519011F4CA5BD0006155C /* OWMThreeHourCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMThreeHourCell.m; sourceTree = "<group>"; };
+		E2F519041F4CAD230006155C /* NSDate+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		E2F519051F4CAD230006155C /* NSDate+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		E2FD0F891F48D71000764787 /* openweather-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openweather-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FD0F8C1F48D71000764787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2FD0F8D1F48D71000764787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +181,8 @@
 			children = (
 				E21D92351F4A4AC30017381E /* OWMWeatherManager.h */,
 				E21D92361F4A4AC30017381E /* OWMWeatherManager.m */,
+				E2F519041F4CAD230006155C /* NSDate+Helper.h */,
+				E2F519051F4CAD230006155C /* NSDate+Helper.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +221,8 @@
 				E26E1EA01F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m */,
 				E26E1EA21F4B7F950065332B /* OWMDailyWeatherCell.h */,
 				E26E1EA31F4B7F950065332B /* OWMDailyWeatherCell.m */,
+				E2F519001F4CA5BD0006155C /* OWMThreeHourCell.h */,
+				E2F519011F4CA5BD0006155C /* OWMThreeHourCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -500,6 +510,11 @@
 				TargetAttributes = {
 					E2FD0F881F48D71000764787 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E2FD0FA01F48D71000764787 = {
 						CreatedOnToolsVersion = 9.0;
@@ -670,6 +685,8 @@
 				E26E1EA41F4B7F950065332B /* OWMDailyWeatherCell.m in Sources */,
 				E26E1E9D1F4B748F0065332B /* OWMFullWeatherViewController.m in Sources */,
 				E21D923D1F4A58AA0017381E /* OWMForecast.m in Sources */,
+				E2F519021F4CA5BD0006155C /* OWMThreeHourCell.m in Sources */,
+				E2F519061F4CAD230006155C /* NSDate+Helper.m in Sources */,
 				E27E8BFE1F48E27900ED5399 /* OWMBaseViewController.m in Sources */,
 				E21D92551F4A6D0D0017381E /* OWMRain.m in Sources */,
 				E26E1EA11F4B7E9C0065332B /* OWMThreeHourTodayWeatherCellTableViewCell.m in Sources */,

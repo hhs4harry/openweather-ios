@@ -10,4 +10,5 @@
 
 @interface OWMThreeHourTodayWeatherCellTableViewCell : UITableViewCell
 
+-(void)setForcasts:(NSArray *)forcasts;
 @end

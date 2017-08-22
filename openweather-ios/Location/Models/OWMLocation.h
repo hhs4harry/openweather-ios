@@ -10,6 +10,7 @@
 #import "OWMPermissionProtocol.h"
 @class MKLocalSearchCompletion;
 @class CLPlacemark;
+@class CLLocation;
 
 typedef enum : NSInteger {
     StatusUnknown = -1,
@@ -18,12 +19,15 @@ typedef enum : NSInteger {
 } Status;
 
 @protocol OWMLocationProtocol
+@optional
 -(void)searchResults:(NSArray<MKLocalSearchCompletion *> *)results;
+-(void)didUpdateLocation:(CLLocation *)location;
 @end
 
 @interface OWMLocation : NSObject <OWMPermissionProtocol>
 @property (weak, nonatomic) id<OWMLocationProtocol> delegate;
-@property (assign, nonatomic) Status status;
+@property (readonly, nonatomic) Status status;
+@property (readonly, nonatomic) CLLocation *lastLocation;
 
 +(instancetype)manager;
 -(void)searchLocation:(NSString *)location;

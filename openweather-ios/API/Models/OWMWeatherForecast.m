@@ -7,14 +7,20 @@
 //
 
 #import "OWMWeatherForecast.h"
+#import "OWMConstants.h"
 
 @implementation OWMWeatherForecast
 
-+ (JSONKeyMapper *)keyMapper
-{
++ (JSONKeyMapper *)keyMapper{
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
                                                                   @"desc": @"description"
                                                                   }];
+}
+
+-(void)setIcon:(NSString *)icon{
+    if (icon && icon.length) {
+        _icon = kWeatherIconURLString(icon);
+    }    
 }
 
 @end
